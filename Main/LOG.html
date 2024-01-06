@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In or Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="LOG.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:ital@1&family=Rubik:ital@1&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="" id="myform" class="sign-in-form">
+                    <h2 class="title" style="color: white;">
+                        Sign in
+                    </h2>
+                    <div class="input-field">
+                        <i class="fas fa-user">
+
+
+                        </i>
+                        <input type="text" placeholder="Username" id="email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password">
+                    </div>
+                    <input type="submit" value="Login" id="login" class="btn solid" name="login">
+                    <!-- ------------------------------------------------------------------------------- -->
+
+
+                    <p class="social-text" style="color:white;">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="signup">
+                        New Here ?<br>
+                        <a href="LOG2.html">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="stripes" id="stripes1"></div>
+    <div class="stripes" id="stripes2"></div>
+    <div class="stripes" id="stripes3"></div>
+    <div class="stripes" id="stripes4"></div>
+    <div class="stripes" id="stripes5"></div>
+    <div class="stripes" id="stripes6"></div>
+    <div class="stripes" id="stripes7"></div>
+    <div class="stripes" id="stripes8"></div>
+    <div class="stripes" id="stripes9"></div>
+    <div class="stripes" id="stripes10"></div>
+    <div class="stripes" id="stripes11"></div>
+
+
+
+
+
+
+</body>
+<script type="module">
+    document.getElementById("myform").addEventListener("submit", function (e) {
+        e.preventDefault();
+    })
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCD00JUieMBuQ_cNbH8D0xRRq6y0c7zCc4",
+        authDomain: "authentication-88117.firebaseapp.com",
+        databaseURL: "https://authentication-88117-default-rtdb.firebaseio.com",
+        projectId: "authentication-88117",
+        storageBucket: "authentication-88117.appspot.com",
+        messagingSenderId: "865258784191",
+        appId: "1:865258784191:web:7df8e340501fb344b94d0a",
+        measurementId: "G-HXKYLM2DDV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    // ---------------------sign up-------------------------------------
+
+    // signUp.addEventListener('click', (e) => {
+
+
+    //     var email = document.getElementById('email').value;
+    //     var password = document.getElementById('password').value;
+
+
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //         .then((userCredential) => {
+    //             // Signed up 
+    //             const user = userCredential.user;
+
+    //             // for database
+    //             set(ref(database, 'users/' + user.uid), {
+
+    //                 email: email
+
+    //             })
+
+    //             // ---------------------------redirecting to another page after auth
+    //             alert('user created!');
+    //             // ...
+    //         })
+    //         .catch((error) => {
+    //             const errorCode = error.code;
+    //             const errorMessage = error.message;
+
+    //             alert(errorMessage);
+    //             // ..
+    //         });
+
+    // });
+// ----------------------------------------------------------------
+   
+
+// login
+
+    login.addEventListener('click', (e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                window.location.replace("Home.html");
+                const user = userCredential.user;
+                const dt = new Date();
+                update(ref(database, 'users/' + user.uid), {
+
+                    last_login: dt,
+                })
+                alert('User Logged in!');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert(errorMessage);
+            });
+    });
+
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            const uid = user.uid;
+            // ...
+        } else {
+            // User is signed out
+            // ...
+        }
+        
+    });
+    // --------------------------log out------------------------
+
+    // logout.addEventListener('click', (e) => {
+    //     signOut(auth).then(() => {
+    //         // Sign-out successful.
+    //         alert('user logged out');
+    //     }).catch((error) => {
+    //         // An error happened.
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+
+    //         alert(errorMessage);
+    //     });
+
+    // });
+</script>
+
+</html>

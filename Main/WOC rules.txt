@@ -1,0 +1,24 @@
+Description: RentEase is the ultimate solution for hassle-free borrowing and lending within your campus community. Whether you are a student in need of a scientific calculator for a week-long project, a faculty member seeking a bicycle for commuting, or anyone requiring various items for short-term use, RentEase has got you covered.
+------------------------------------------------------------------------------
+Features:
+
+A signup/login feature to authenticate users and rent their commodities using that account.
+Renter can upload his/her commodities’ image and its information.
+Renter can toggle the availability status of a commodity as per his/her wish.
+When in need of an item, a borrower can check all the list of items available for his/her disposal.
+Borrowers can contact the renter and make a deal.
+Make a review system.(extra)
+Renting history feature.(extra)
+-------------------------------------------------------------------------------
+Goals:
+
+Build a basic frontend layout of the website using HTML, CSS.
+Firebase integration for authentication, photos and information storage.
+Toggle the availability of items.
+Make an upvote/downvote feature where the user can give ratings about the items(and the renter).
+Upload contact information and other important information to strike a deal.
+--------------------------------------------------------------------------------
+Requirements:
+
+Basic knowledge of HTML, CSS, and JavaScript
+Basic knowledge of firebase and its features of authentication and storage

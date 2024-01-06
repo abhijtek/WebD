@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Rubik:ital@1&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: rgba(209, 247, 254, 255);
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .start {
+        color:rgb(9, 16, 59);
+        Border: 6px solid rgb(31, 228, 232);
+        font-size: 40px;
+        padding: 1%;
+        margin-top: 12px;
+        border-radius: 6px;
+        width: 33%;
+        margin: auto;
+        margin-top: 20px;
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        font-weight: bolder;
+        text-shadow : 2px 2px #0f9c8c;
+       
+
+    }
+    
+    .start a{
+        text-decoration: none;
+    }
+    .start a:hover{
+        color:white;
+        font-size: larger;
+        font-weight: bolder;
+        text-shadow: 2px 2px black;
+        transition-duration:0.8s;
+        
+        }
+        .start:hover{
+            box-shadow:3px 2px #0093E9;
+            background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+
+
+
+        }
+
+
+    .logo {
+        animation-name: anime;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+
+    .title {
+        animation-name: anime2;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+
+     img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bridge {
+        animation-name: anime3;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+
+    .start {
+        position:relative;
+        animation-name: anime4;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+
+    @keyframes anime {
+        from {
+            top: 100px;
+
+        }
+
+        to {
+            top: 0px;
+        }
+    }
+
+    @keyframes anime2 {
+        from {
+            top: 1000px;
+
+        }
+
+        to {
+            top: 0px;
+        }
+    }
+
+    @keyframes anime3 {
+        from {
+            top: 1100px;
+
+        }
+
+        to {
+            top: 0px;
+        }
+
+    }
+
+    @keyframes anime4 {
+        from {
+            top: 1900px;
+            
+        }
+
+        to {
+            top: 0px;
+            
+        }
+    }
+</style>
+
+<body>
+    <div><img class="image logo" src="logo 2.png"></div>
+    <div><img class="image title" src="Screenshot 2023-12-22 184408.png"></div>
+    <div><img class="bridge" src="bridge.png"></div>
+    <div class="start">
+    <a href="LOG.html" target="_self" >
+        Let's Get Started
+</a>    
+    </div>
+
+
+
+</body>
+
+</html>
